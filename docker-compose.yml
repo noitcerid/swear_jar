@@ -14,4 +14,6 @@ services:
     # This is crucial for data persistence, so your data isn't lost
     # when the container stops or restarts.
     volumes:
-      - ./swear_jar.json:/app/swear_jar.json
+      - type: bind
+      - source: ./swear_jar.json
+      - target: /app/swear_jar.json
