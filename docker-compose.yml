@@ -1,0 +1,17 @@
+# Use version 3.8 of the Docker Compose file format
+version: '3.8'
+
+# Define the services (containers) for your application
+services:
+  # Define a service named 'web'
+  web:
+    # Build the Docker image from the Dockerfile in the current directory (.)
+    build: .
+    # Map port 5000 on the host machine to port 5000 in the container
+    ports:
+      - "5000:5000"
+    # Mount the local swear_jar.json file into the container.
+    # This is crucial for data persistence, so your data isn't lost
+    # when the container stops or restarts.
+    volumes:
+      - ./swear_jar.json:/app/swear_jar.json
