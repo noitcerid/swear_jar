@@ -10,11 +10,11 @@ services:
     # Map port 5000 on the host machine to port 5000 in the container
     ports:
       - "5000:5000"
-    # Mount the local swear_jar.json file into the container.
+    # Mount the local tic_jar.json file into the container.
     # This is crucial for data persistence, so your data isn't lost
     # when the container stops or restarts.
     volumes:
-      - swear_jar_data:/app
+      - tic_jar_data:/app
 
 volumes:
-  swear_jar_data:
+  tic_jar_data:

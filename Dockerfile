@@ -16,4 +16,4 @@ EXPOSE 5000
 
 # 6. Command to run the application using Gunicorn
 # This is a more robust server than the default Flask development server.
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "swear_jar_web:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "tic_jar_web:app"]
